@@ -5,8 +5,8 @@ name: Build Docker images
 env:
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
   DOCKER_PASSWORD: '${{ secrets.DOCKER_PASSWORD }}'
-  DOCKER_ORGANIZATION: philipssoftware
-  GITHUB_ORGANIZATION: philips-software
+  DOCKER_ORGANIZATION: ${{ secrets.DOCKER_ORGANIZATION }}
+  GITHUB_ORGANIZATION: ${{ secrets._GITHUB_ORGANIZATION }}
   DOCKER_BUILDKIT: 1
 
 jobs:
@@ -24,4 +24,4 @@ jobs:
         dockerfile: Dockerfile
         base-dir: latest/ort
         image-name: ort
-        tags: latest 2021-10-06
+        tags: latest 2021-11-19
